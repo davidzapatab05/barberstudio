@@ -1,0 +1,94 @@
+---
+import content from '../data/content.json';
+import { Button } from './ui/button';
+import { InstagramIcon as Instagram, MessageCircleIcon as MessageCircle, ClockIcon as Clock, MapPinIcon as MapPin, TikTokIcon as TikTok } from './Icons';
+
+const whatsappUrl = `https://wa.me/${content.brand.whatsapp.number.replace('+', '')}?text=${encodeURIComponent(content.brand.whatsapp.message)}`;
+---
+
+<footer id="contacto" class="bg-black pt-24 pb-12">
+  <div class="container mx-auto px-6">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+      
+      {/* Columna 1: Logo y Slogan */}
+      <div class="flex flex-col">
+        <a href="#" class="font-display text-3xl tracking-widest text-white uppercase mb-1">
+          {content.brand.name}
+        </a>
+        <span class="font-sans text-xs text-primary tracking-widest uppercase mb-6">
+          {content.brand.owner}
+        </span>
+        <p class="font-sans text-sm text-muted-foreground font-light mb-8">
+          {content.footer.slogan}
+        </p>
+        <div class="flex gap-4">
+          <a href={content.footer.social.instagram_url} target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-full border border-[#1a1a1a] flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+            <Instagram size={18} />
+          </a>
+          <a href={content.footer.social.tiktok_url} target="_blank" aria-label="TikTok" class="w-10 h-10 rounded-full border border-[#1a1a1a] flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+            <TikTok size={18} />
+          </a>
+          <a href={whatsappUrl} target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-full border border-[#1a1a1a] flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors">
+            <MessageCircle size={18} />
+          </a>
+        </div>
+      </div>
+
+      {/* Columna 2: Reservas */}
+      <div class="flex flex-col">
+        <h3 class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-6">Reservas</h3>
+        <div class="flex items-start gap-4 mb-8">
+          <MessageCircle class="text-muted-foreground mt-1" size={20} />
+          <div>
+            <p class="font-sans text-sm text-white mb-1">WhatsApp</p>
+            <p class="font-sans text-sm text-muted-foreground">{content.brand.whatsapp.number}</p>
+          </div>
+        </div>
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+          <Button variant="outline" className="w-full justify-center rounded-md border-[#1a1a1a] text-white hover:bg-primary hover:border-primary hover:text-white font-sans text-xs tracking-widest uppercase h-12 transition-all">
+            Reservar Cita
+          </Button>
+        </a>
+      </div>
+
+      {/* Columna 3: Horarios */}
+      <div class="flex flex-col">
+        <h3 class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-6">Horarios</h3>
+        <div class="flex items-start gap-4 mb-6">
+          <Clock class="text-muted-foreground mt-1" size={20} />
+          <div class="flex flex-col gap-4">
+            <div>
+              <p class="font-sans text-sm text-white mb-1">{content.footer.schedule.days1}</p>
+              <p class="font-sans text-sm text-muted-foreground">{content.footer.schedule.hours1}</p>
+            </div>
+            <div>
+              <p class="font-sans text-sm text-white mb-1">{content.footer.schedule.days2}</p>
+              <p class="font-sans text-sm text-muted-foreground">{content.footer.schedule.hours2}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Columna 4: Ubicación */}
+      <div class="flex flex-col">
+        <h3 class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-6">Ubicación</h3>
+        <div class="flex items-start gap-4 mb-8">
+          <MapPin class="text-muted-foreground mt-1" size={20} />
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">
+            {content.footer.location.address.split('\n').map(line => (
+              <span class="block">{line}</span>
+            ))}
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom Bar */}
+    <div class="pt-8 border-t border-[#1a1a1a] text-center">
+      <p class="font-sans text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase" set:html={content.footer.bottom_text.replace('TU IDENTIDAD', '<span class="text-primary">TU IDENTIDAD</span>')} />
+    </div>
+
+  </div>
+</footer>

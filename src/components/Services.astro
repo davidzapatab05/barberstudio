@@ -1,0 +1,47 @@
+---
+import content from '../data/content.json';
+import { ScissorsIcon as Scissors, UserIcon as User, EyeIcon as Eye, GemIcon as Gem } from './Icons';
+
+const iconMap: Record<string, any> = {
+  Scissors,
+  User,
+  Eye,
+  Gem
+};
+---
+
+<section id="servicios" class="bg-black py-24 md:py-32 px-6 min-h-[110vh] flex flex-col justify-center">
+  <div class="container mx-auto">
+    
+    <div class="mb-16">
+      <p class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-4">{content.services.section_subtitle}</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white">{content.services.title}</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {content.services.items.map((item: any) => {
+        const Icon = iconMap[item.icon as keyof typeof iconMap];
+        return (
+          <div class="group relative bg-[#050505] border border-[#1a1a1a] p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:border-primary/50 hover:bg-[#0a0a0a] hover:-translate-y-2">
+            
+            <div class="w-12 h-12 rounded-full border border-[#1a1a1a] bg-black flex items-center justify-center mb-8 text-primary group-hover:scale-110 transition-transform duration-500 group-hover:shadow-[0_0_20px_rgba(0,85,255,0.2)]">
+              {Icon && <Icon size={20} />}
+            </div>
+            
+            <h3 class="font-display text-lg md:text-xl text-white mb-4 tracking-widest uppercase">{item.name}</h3>
+            
+            <p class="font-sans text-sm text-muted-foreground leading-relaxed font-light flex-grow">
+              {item.description}
+            </p>
+
+            <a href={`https://wa.me/${content.brand.whatsapp.number.replace('+', '')}?text=${encodeURIComponent(`Hola Geferson, me interesa el servicio de ${item.name}.`)}`} target="_blank" rel="noopener noreferrer" class="mt-8 font-sans text-xs tracking-widest text-primary hover:text-white uppercase flex items-center gap-2 transition-colors" aria-label={`Más información sobre ${item.name}`}>
+              MÁS INFO &rarr;
+            </a>
+
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+import content from '../data/content.json';
+---
+
+<section class="bg-background py-24 px-6 md:px-12">
+  <div class="container mx-auto">
+    <div class="flex flex-col md:flex-row justify-between md:items-end mb-16 gap-4">
+      <h2 class="text-4xl md:text-6xl font-display">{content.social.title}</h2>
+      <a href={content.social.url} target="_blank" rel="noopener noreferrer" class="font-body text-base tracking-widest text-muted-foreground underline underline-offset-4 hover:text-primary transition-colors">
+        {content.social.handle}
+      </a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {content.social.images.map((img) => (
+        <a href={content.social.url} target="_blank" rel="noopener noreferrer" class="relative aspect-[4/5] block overflow-hidden group">
+          <img src={img} alt="Instagram post" loading="lazy" class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <span class="font-body text-xs tracking-widest text-foreground border border-foreground px-4 py-2">
+              VER EN IG &nearr;
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

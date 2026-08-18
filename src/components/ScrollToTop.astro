@@ -1,0 +1,40 @@
+---
+---
+
+<button
+  id="scrollToTopBtn"
+  class="fixed bottom-8 md:bottom-12 right-6 md:right-8 z-50 p-3 rounded-full text-white shadow-lg shadow-blue-500/30 opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white hover:text-black hover:scale-110"
+  style="background-color: #0055FF;"
+  aria-label="Volver arriba"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 15-6-6-6 6"/>
+  </svg>
+</button>
+
+<script>
+  const btn = document.getElementById('scrollToTopBtn');
+  
+  if (btn) {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        btn.classList.add('opacity-100', 'translate-y-0');
+      } else {
+        btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        btn.classList.remove('opacity-100', 'translate-y-0');
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Llamar una vez al inicio por si la página ya cargó con scroll
+    handleScroll();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>

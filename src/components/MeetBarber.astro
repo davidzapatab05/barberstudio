@@ -1,0 +1,35 @@
+---
+import content from '../data/content.json';
+---
+
+<section id="sobre-mi" class="bg-black py-24 md:py-32 min-h-[110vh] flex flex-col justify-center">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
+      
+      {/* Texto */}
+      <div class="order-last md:order-first">
+        <p class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-4">{content.meetBarber.section_subtitle}</p>
+        <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
+          {content.meetBarber.title}
+        </h2>
+        <p class="font-sans text-lg text-muted-foreground font-light leading-relaxed mb-12 max-w-lg">
+          {content.meetBarber.description}
+        </p>
+        <div class="signature-text">
+          {content.meetBarber.signature}
+        </div>
+      </div>
+
+      {/* Imagen / Logo */}
+      <div class="relative w-full aspect-[4/5] md:aspect-square flex items-center justify-center p-8 md:p-12">
+        <img 
+          src={content.meetBarber.image} 
+          alt={content.meetBarber.signature} 
+          loading="lazy"
+          class="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

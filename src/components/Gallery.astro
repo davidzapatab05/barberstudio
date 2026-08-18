@@ -1,0 +1,15 @@
+---
+import content from '../data/content.json';
+import GalleryCarousel from './GalleryCarousel';
+---
+
+<section id="galeria" class="bg-black py-24 md:py-32 min-h-[110vh] flex flex-col justify-center">
+  <div class="container mx-auto px-6 mb-12">
+    <p class="font-sans text-xs tracking-[0.2em] text-primary uppercase mb-4">{content.gallery.section_subtitle}</p>
+    <h2 class="font-display text-4xl md:text-5xl text-white">{content.gallery.title}</h2>
+  </div>
+  
+  <div class="w-full">
+    <GalleryCarousel client:visible images={content.gallery.images} />
+  </div>
+</section>

@@ -1,0 +1,119 @@
+{
+  "brand": {
+    "name": "Barber Studio",
+    "owner": "By Geferson Maldonado",
+    "whatsapp": {
+      "number": "+51998315890",
+      "message": "Hola Geferson, quiero reservar una cita en Barber Studio."
+    }
+  },
+  "navbar": {
+    "links": [
+      { "name": "INICIO", "href": "#" },
+      { "name": "SERVICIOS", "href": "#servicios" },
+      { "name": "GALERÍA", "href": "#galeria" },
+      { "name": "SOBRE MÍ", "href": "#sobre-mi" }
+    ],
+    "cta": "RESERVAR CITA"
+  },
+  "hero": {
+    "tagline": "ARTE • ESTILO • ACTITUD",
+    "title_normal": "Precisión",
+    "title_highlight": "en cada corte",
+    "subtitle": "Más que un corte, una experiencia\nhecha para hombres que exigen lo mejor.",
+    "cta": "RESERVAR CITA",
+    "image": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=60&w=1080&auto=format&fit=crop"
+  },
+  "services": {
+    "section_subtitle": "NUESTROS SERVICIOS",
+    "title": "Servicios Premium",
+    "items": [
+      {
+        "id": "corte",
+        "name": "CORTE",
+        "description": "Cortes modernos y clásicos con técnica y precisión.",
+        "icon": "Scissors"
+      },
+      {
+        "id": "barba",
+        "name": "BARBA",
+        "description": "Arreglo y diseño de barba con toallas calientes.",
+        "icon": "User"
+      },
+      {
+        "id": "cejas",
+        "name": "CEJAS",
+        "description": "Perfilado y diseño para una mirada más definida.",
+        "icon": "Eye"
+      },
+      {
+        "id": "premium",
+        "name": "PREMIUM EXPERIENCE",
+        "description": "Experiencia completa: corte, barba, cejas y más.",
+        "icon": "Gem"
+      }
+    ]
+  },
+  "gallery": {
+    "section_subtitle": "GALERÍA",
+    "title": "Estilo en cada detalle",
+    "images": [
+      "/Foto 1.png",
+      "/Foto 2.png",
+      "/Foto 3.png",
+      "/Foto 4.png",
+      "/Foto 5.png",
+      "/Foto 6.png"
+    ]
+  },
+  "transformation": {
+    "title": "Resultados Impecables",
+    "beforeImage": "/Antes.png",
+    "afterImage": "/Despues.png"
+  },
+  "meetBarber": {
+    "section_subtitle": "SOBRE MÍ",
+    "title": "Pasión. Técnica. Dedicación.",
+    "description": "Soy Geferson Maldonado, barbero apasionado por el detalle y la excelencia. Mi objetivo es realizar tu mejor versión a través de cortes y experiencias premium.",
+    "signature": "Geferson Maldonado",
+    "image": "/logo.png"
+  },
+  "testimonials": {
+    "section_subtitle": "LO QUE DICEN MIS CLIENTES",
+    "title": "Opiniones reales",
+    "items": [
+      {
+        "text": "He pasado por muchas barberías en la ciudad, pero el nivel de detalle y perfeccionismo de Geferson es de otro nivel. Entendió exactamente el estilo que buscaba. Un servicio verdaderamente premium, el arreglo de barba con toalla caliente te deja totalmente renovado.",
+        "author": "Maylor Neyra"
+      },
+      {
+        "text": "No es el clásico corte apurado de siempre, acá realmente se toman el tiempo para perfilar y estructurar tu estilo según tus facciones. Geferson te asesora de verdad y cuida cada ángulo. Siempre salgo impecable y con la confianza a tope, un verdadero artista.",
+        "author": "David Zapata"
+      },
+      {
+        "text": "La atención es de primera desde que llegas. Se nota la técnica en los degradados y el pulso que tiene. Pedí el Premium Experience y valió cada sol; cuidaron el más mínimo detalle en las cejas y los contornos. Definitivamente se ha convertido en mi barbero exclusivo.",
+        "author": "Jorge Guerrero"
+      }
+    ]
+  },
+  "footer": {
+    "slogan": "Eleva tu estilo. Confía en la precisión.",
+    "social": {
+      "instagram": "@geferson.maldonado",
+      "instagram_url": "https://instagram.com",
+      "tiktok": "@geferson.maldonado",
+      "tiktok_url": "https://tiktok.com"
+    },
+    "schedule": {
+      "days1": "Miércoles a Lunes",
+      "hours1": "8:00 AM - 8:00 PM",
+      "days2": "Martes",
+      "hours2": "Todo el día (A domicilio)"
+    },
+    "location": {
+      "address": "Piura, Perú\nCortes a domicilio (Martes)",
+      "map_url": "https://maps.google.com"
+    },
+    "bottom_text": "\"NO ES SOLO UN CORTE, ES TU IDENTIDAD.\""
+  }
+}

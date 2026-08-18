@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Gallery from '../components/Gallery.astro';
+import Transformation from '../components/Transformation.astro';
+import MeetBarber from '../components/MeetBarber.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+---
+
+<Layout title="Geferson Maldonado | Barber Studio Premium">
+  <Navbar />
+  <main class="bg-black text-foreground overflow-x-hidden selection:bg-primary selection:text-white">
+    <Hero />
+    <Services />
+    <Gallery />
+    <Transformation />
+    <MeetBarber />
+    <Testimonials />
+    <Footer />
+  </main>
+  <ScrollToTop />
+</Layout>
